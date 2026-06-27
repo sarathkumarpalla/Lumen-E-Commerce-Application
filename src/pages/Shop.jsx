@@ -23,7 +23,6 @@ const Shop = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      {/* Page Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between border-b border-gray-100 pb-6 mb-8 dark:border-zinc-800">
         <div>
           <h1 className="font-display text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
@@ -34,7 +33,6 @@ const Shop = () => {
           </p>
         </div>
 
-        {/* Mobile controls */}
         <div className="flex items-center gap-2 mt-4 md:mt-0 lg:hidden">
           <button
             onClick={() => setIsMobileFilterOpen(true)}
@@ -47,10 +45,8 @@ const Shop = () => {
       </div>
 
       <div className="flex gap-8 items-start">
-        {/* Desktop Sidebar Filters */}
         <FilterSidebar />
 
-        {/* Products Grid Section */}
         <div className="flex-1">
           {error ? (
             <div className="rounded-xl border border-red-100 bg-red-50/50 p-8 text-center dark:border-red-900/30 dark:bg-red-950/10">
@@ -105,12 +101,9 @@ const Shop = () => {
           )}
         </div>
       </div>
-
-      {/* Mobile Filters Drawer Overlay */}
       <AnimatePresence>
         {isMobileFilterOpen && (
           <div className="fixed inset-0 z-50 lg:hidden">
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -119,7 +112,6 @@ const Shop = () => {
               className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             />
             
-            {/* Drawer */}
             <motion.div
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}

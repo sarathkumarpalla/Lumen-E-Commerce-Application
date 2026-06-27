@@ -32,7 +32,6 @@ const MiniCart = ({ onClose }) => {
       transition={{ type: 'spring', damping: 20, stiffness: 300 }}
       className="absolute right-0 mt-2 w-80 sm:w-96 rounded-xl border border-gray-100 bg-white p-4 shadow-xl ring-1 ring-black/5 transition-colors duration-300 dark:border-zinc-800 dark:bg-brand-card-dark dark:shadow-black/40"
     >
-      {/* Header */}
       <div className="flex items-center justify-between border-b border-gray-100 pb-3 dark:border-zinc-800">
         <h3 className="font-display text-base font-semibold text-gray-900 dark:text-white flex items-center gap-2">
           <ShoppingBag className="h-4 w-4 text-accent" />
@@ -46,7 +45,6 @@ const MiniCart = ({ onClose }) => {
         </button>
       </div>
 
-      {/* Cart Items List */}
       <div className="max-h-60 overflow-y-auto py-3">
         {isEmpty ? (
           <div className="flex flex-col items-center justify-center py-8 text-center">
@@ -94,7 +92,6 @@ const MiniCart = ({ onClose }) => {
         )}
       </div>
 
-      {/* Footer / Subtotal & Actions */}
       {!isEmpty && (
         <div className="border-t border-gray-100 pt-3 dark:border-zinc-800">
           <div className="flex items-center justify-between text-sm font-semibold text-gray-900 dark:text-white mb-4">

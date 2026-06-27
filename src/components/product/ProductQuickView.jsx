@@ -40,7 +40,6 @@ const ProductQuickView = ({ product, isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Backdrop animation */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -49,7 +48,6 @@ const ProductQuickView = ({ product, isOpen, onClose }) => {
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
       />
 
-      {/* Modal Content animation */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -57,7 +55,6 @@ const ProductQuickView = ({ product, isOpen, onClose }) => {
         transition={{ type: 'spring', damping: 25, stiffness: 350 }}
         className="relative z-10 flex w-full max-w-4xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl transition-colors duration-300 md:flex-row dark:bg-brand-card-dark"
       >
-        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute right-4 top-4 z-20 rounded-full bg-white/80 p-1.5 text-gray-500 shadow-md backdrop-blur-sm transition hover:bg-white hover:text-gray-900 dark:bg-zinc-800/80 dark:text-zinc-400 dark:hover:bg-zinc-850 dark:hover:text-white"
@@ -65,7 +62,6 @@ const ProductQuickView = ({ product, isOpen, onClose }) => {
           <X className="h-5 w-5" />
         </button>
 
-        {/* Product Image Section */}
         <div className="flex items-center justify-center bg-gray-50 p-8 md:w-1/2 dark:bg-zinc-900/50">
           <img
             src={product.image}
@@ -74,19 +70,15 @@ const ProductQuickView = ({ product, isOpen, onClose }) => {
           />
         </div>
 
-        {/* Product Details Section */}
         <div className="flex flex-col p-6 sm:p-8 md:w-1/2">
-          {/* Category */}
           <span className="text-xs font-bold uppercase tracking-wider text-accent mb-2">
             {product.category}
           </span>
 
-          {/* Title */}
           <h2 className="font-display text-xl font-bold text-gray-900 dark:text-white sm:text-2xl leading-snug">
             {product.title}
           </h2>
 
-          {/* Rating */}
           <div className="flex items-center gap-2 mt-3 mb-4">
             <div className="flex">{renderStars(product.rating?.rate)}</div>
             <span className="text-xs font-semibold text-gray-600 dark:text-zinc-400">
@@ -99,14 +91,12 @@ const ProductQuickView = ({ product, isOpen, onClose }) => {
 
           <div className="border-t border-gray-150 my-2 dark:border-zinc-800" />
 
-          {/* Price */}
           <div className="my-3">
             <span className="text-2xl font-extrabold text-gray-900 dark:text-white">
               ${product.price.toFixed(2)}
             </span>
           </div>
 
-          {/* Description */}
           <div className="max-h-36 overflow-y-auto pr-2 mb-6">
             <p className="text-sm leading-relaxed text-gray-600 dark:text-zinc-400">
               {product.description}
@@ -114,7 +104,6 @@ const ProductQuickView = ({ product, isOpen, onClose }) => {
           </div>
 
           <div className="mt-auto space-y-4">
-            {/* Quantity Controller & Add to Cart */}
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <div className="flex h-11 items-center justify-between rounded-lg border border-gray-200 px-3 dark:border-zinc-700 sm:w-32">
                 <button

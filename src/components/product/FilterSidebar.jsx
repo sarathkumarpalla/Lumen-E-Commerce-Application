@@ -29,7 +29,6 @@ const FilterSidebar = ({ isMobile, onClose }) => {
 
   const renderContent = () => (
     <div className="space-y-6">
-      {/* Search */}
       <div>
         <label className="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-zinc-500 block mb-2.5">
           Search Products
@@ -54,7 +53,6 @@ const FilterSidebar = ({ isMobile, onClose }) => {
         </div>
       </div>
 
-      {/* Sorting (Mobile inline or sidebar) */}
       <div>
         <label className="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-zinc-500 block mb-2.5">
           Sort By
@@ -76,7 +74,6 @@ const FilterSidebar = ({ isMobile, onClose }) => {
         </div>
       </div>
 
-      {/* Categories */}
       <div>
         <label className="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-zinc-500 block mb-2.5">
           Categories
@@ -106,7 +103,6 @@ const FilterSidebar = ({ isMobile, onClose }) => {
         </div>
       </div>
 
-      {/* Clear Button */}
       {hasActiveFilters && (
         <button
           onClick={clearFilters}

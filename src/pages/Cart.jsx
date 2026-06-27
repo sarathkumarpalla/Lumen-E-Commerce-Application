@@ -55,20 +55,17 @@ const Cart = () => {
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 items-start">
-          {/* Cart Items List */}
           <div className="lg:col-span-8 space-y-4">
             <div className="rounded-2xl border border-gray-100 bg-white dark:border-zinc-800/80 dark:bg-brand-card-dark overflow-hidden">
               <div className="divide-y divide-gray-100 dark:divide-zinc-800/80">
                 {cart.map((item) => (
                   <div key={item.id} className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 sm:p-6 transition hover:bg-gray-50/40 dark:hover:bg-zinc-900/10">
                     <div className="flex gap-4 items-center">
-                      {/* Image */}
                       <img
                         src={item.image}
                         alt={item.title}
                         className="h-16 w-16 sm:h-20 sm:w-20 rounded-xl bg-gray-50 object-contain p-2 border border-gray-100 dark:border-zinc-800 dark:bg-zinc-900"
                       />
-                      {/* Metadata */}
                       <div className="space-y-1 min-w-0">
                         <span className="text-[10px] font-bold text-accent uppercase tracking-wider">{item.category}</span>
                         <h3 className="text-sm font-semibold text-gray-900 dark:text-white truncate max-w-[200px] sm:max-w-xs md:max-w-sm">
@@ -81,12 +78,10 @@ const Cart = () => {
                     </div>
 
                     <div className="flex items-center justify-between sm:justify-end gap-6 sm:gap-10">
-                      {/* Price (Desktop) */}
                       <p className="hidden sm:block text-sm font-semibold text-gray-500 dark:text-zinc-400">
                         ${item.price.toFixed(2)}
                       </p>
 
-                      {/* Quantity Selector */}
                       <div className="flex h-9 items-center justify-between rounded-lg border border-gray-200 px-2 dark:border-zinc-700 w-24">
                         <button
                           onClick={() => updateQuantity(item.id, -1)}
@@ -106,13 +101,10 @@ const Cart = () => {
                           <Plus className="h-3.5 w-3.5" />
                         </button>
                       </div>
-
-                      {/* Line Item Total */}
                       <p className="text-sm font-bold text-gray-900 dark:text-white min-w-[70px] text-right">
                         ${(item.price * item.quantity).toFixed(2)}
                       </p>
 
-                      {/* Remove Button */}
                       <button
                         onClick={() => handleRemove(item.id, item.title)}
                         className="text-gray-400 hover:text-red-500 dark:text-zinc-550 dark:hover:text-red-400 transition-colors p-1"
@@ -126,7 +118,6 @@ const Cart = () => {
               </div>
             </div>
 
-            {/* Back to Shop link */}
             <Link
               to="/shop"
               className="inline-flex items-center gap-1.5 text-sm font-bold text-accent hover:text-accent-hover transition-colors"
@@ -136,7 +127,6 @@ const Cart = () => {
             </Link>
           </div>
 
-          {/* Order Summary Card */}
           <div className="lg:col-span-4 sticky top-24">
             <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm dark:border-zinc-800/80 dark:bg-brand-card-dark transition-colors duration-300">
               <h2 className="font-display text-lg font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-100 pb-3 dark:border-zinc-800">

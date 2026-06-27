@@ -49,14 +49,12 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/80 bg-white/80 backdrop-blur-md transition-colors duration-300 dark:border-zinc-800/80 dark:bg-brand-dark/80">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Logo */}
         <div className="flex items-center">
           <Link to="/" className="font-display text-2xl font-black tracking-tight text-gray-900 transition-colors dark:text-white">
             Lumen<span className="text-accent">.</span>
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.path;
@@ -76,9 +74,7 @@ const Header = () => {
           })}
         </nav>
 
-        {/* Action Buttons */}
         <div className="flex items-center space-x-3 sm:space-x-4">
-          {/* Dark Mode Toggle */}
           <button
             onClick={toggleDarkMode}
             className="rounded-full p-2 text-gray-600 transition-colors hover:bg-gray-100 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-white"
@@ -87,7 +83,6 @@ const Header = () => {
             {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </button>
 
-          {/* Cart Icon trigger */}
           <div className="relative">
             <button
               ref={cartButtonRef}
@@ -103,7 +98,6 @@ const Header = () => {
               )}
             </button>
 
-            {/* Mini Cart Dropdown */}
             <AnimatePresence>
               {isMiniCartOpen && (
                 <div ref={miniCartRef}>
@@ -113,7 +107,6 @@ const Header = () => {
             </AnimatePresence>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="rounded-md p-2 text-gray-600 transition-colors hover:bg-gray-100 md:hidden dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-white"
@@ -124,7 +117,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer (framer-motion) */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div

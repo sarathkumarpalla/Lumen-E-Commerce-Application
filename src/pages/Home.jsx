@@ -17,10 +17,8 @@ const Home = () => {
 
   return (
     <div className="space-y-16 pb-16">
-      {/* Hero Section */}
       <section className="relative overflow-hidden bg-gray-50 transition-colors duration-300 dark:bg-zinc-900/40 bg-orange-600">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32 flex flex-col-reverse lg:flex-row items-center gap-12">
-          {/* Text Content */}
           <div className="flex-1 text-center lg:text-left space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-orange-100/80 px-3.5 py-1.5 text-xs font-bold text-accent dark:bg-orange-500/10">
               <Flame className="h-3.5 w-3.5" />
@@ -56,11 +54,9 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Visual Element / Grid of Floating Images */}
           <div className="flex-1 w-full max-w-md lg:max-w-none">
             <div className="relative aspect-square sm:aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-orange-400/20 via-amber-300/10 to-transparent p-8 flex items-center justify-center border border-gray-150/50 dark:border-zinc-800/40">
               <div className="relative w-full h-full flex items-center justify-center">
-                {/* Floating cards / Visual showcase */}
                 <div className="absolute top-4 left-4 w-36 h-36 rounded-2xl bg-white dark:bg-brand-card-dark shadow-md p-4 rotate-[-6deg] transition hover:rotate-0 duration-300 border border-gray-100 dark:border-zinc-800 flex flex-col items-center justify-center">
                   <span className="text-[9px] font-bold text-accent uppercase tracking-wider mb-2">Jewelry</span>
                   <div className="h-16 w-16 bg-gray-50 dark:bg-zinc-900 rounded-lg p-2 flex items-center justify-center">
@@ -87,7 +83,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Brand Value Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="flex gap-4 p-5 rounded-2xl border border-gray-100/50 bg-white dark:border-zinc-850 dark:bg-zinc-900/20">
           <div className="rounded-xl bg-orange-100/60 p-3 text-accent h-12 w-12 flex items-center justify-center dark:bg-orange-500/10">
@@ -120,7 +115,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Products Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="flex items-end justify-between border-b border-gray-100 pb-4 dark:border-zinc-800">
           <div>
